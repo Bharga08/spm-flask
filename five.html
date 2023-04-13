@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function thankyou(){
+            var name=document.fv.name.value;
+            var mobile=document.fv.mobile.value;
+            var email=document.fv.email.value;
+            var reg=/^([a-zA-Z0-9\._]+)@([a-z]+).([a-z]+){2,3}$/;
+            var password=document.fv.password.value;
+            var checkpassword=document.fv.checkpassword.value;
+            if(name==''){
+                alert("please Enter Your Name");
+                return false;
+            }
+            if(name.length<3){
+                alert("please check your name")
+                return false;
+            }
+            if(mobile==""){
+                alert("please enter your mobile number");
+                return false;
+            }
+            if(isNaN(mobile)||mobile.length<10){
+                alert("please check your mobile number");
+                return false;
+            }
+            if(email==""){
+                alert("enter your Email Id");
+                return false;
+            }
+            if(!email.match(reg)){
+                alert("please check your Email Id");
+                return false;
+            }
+            if(password==""){
+                alert("Enter your password");
+                return false;
+            }
+            if(password.length<8){
+                alert("password must carry  minimum 8 characters");
+                return false;
+            }
+            if(chechpassword==""){
+                alert("please Enter your Re-type field");
+                return false;
+            }
+            if(checkpassword.match(password)){
+                alert("please check your password and Re-type password once again");
+                return false;
+            }
+            return true;
+        }
+        
+
+    </script>
+</head>
+<body>
+    <h1> This is about  Validation</h1>
+    <form name="fv" onsubmit="return thankyou()">
+        <input type="text" name="name" placeholder="enter your Name"/>
+        <input type="text" name="mobile" placeholder="enter your mobile number"/>
+        <input type="text" name="email" placeholder="Enter your email"/>
+        <input type="password" name="password" placeholder="enter your password"/>
+        <input type="password" name="checkpassword" placeholder="enter your password again"/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="Clear"/>
+    </form>
+</body>
+</html>

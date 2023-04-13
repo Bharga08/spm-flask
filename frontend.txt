@@ -1,0 +1,746 @@
+                                                                        HTML:HYPER TEST MARKUP LANGAUGE:       
+                         DAY-8/3(wednesday)    
+                           ----------
+
+
+ATTRIBUTES IN HTML:
+-------------------
+ .all html elements can have attributes
+ .attributes can provide additional information about elements
+  
+SYNTAX:
+------
+name="value"
+ ex:href
+    src
+    class
+    alt
+  ANCHOR TAG:
+-------------
+.the <a> tag defines hyperlink,which is used to link one page to another page
+.it can also redirect the page to another website
+                <a href="url address"> Link</a>
+
+
+                           DAY-9/3(thursday)
+                           --------
+IMAGE TAG:
+----------
+the <img/>tag is used to embed an image in an HTML page
+in  image tag we  manily use src & alt attributes
+.src-->specifies the path to the image
+.alt-->specifies an alternate text for the image,if the image for some reason cannot be displayed
+STRUCTURE OF IMAGE TAG:
+-----------------------
+image tag has mainly two types of src's 
+.absolute
+.relative
+in absloute we give URL address 
+in relative we give local image file paths
+    <img src="url address" alt="image"/>
+    <img src="path address" alt="image"/>
+ 
+LISTS IN HTML:
+-------------
+Lists are mainly three types:
+.unorderd lists
+.ordered lists
+.descrption lists
+unordered lists displays content :
+STRUCTURE OF UNORDERED LIST:
+---------------------------
+</ul>
+<ul style="list=style-type:circle">
+  <li> content </li>
+  <li> content </li>
+EX:
+---
+<ul style="list-style-type:circle">
+    <li> apple </li>
+    <li> mango </li>
+    <li> banana </li>
+    <li> orange </li>
+    <li> pine apple </li>
+</ul>
+STRUCTURE OF ORDERED LIST:
+-------------------------
+<ol>
+<li> content </li>
+<li>content</li>
+</ol>
+                             #type=.(default)
+<ol type="1">
+ <lii>content</li>             we use different types
+ <li>content</li>
+
+<ol start="40">
+ <li>content</li>
+ <li>content</li>
+</ol>
+EX:
+---
+<ol>
+    <li> potato </li>
+    <li> lady finger </li>
+    <li> beans </li>
+    <li> carrot </li>
+    <li> tamota </li>
+                               # type=1(default)
+</ol>
+<ol  start="8">                         we want to give different types
+<li> potato </li>
+<li> lady finger </li>
+<li> beans </li>
+<li> carrot </li>
+<li> tamota </li>
+<ol>
+STRUCTURE OF DESCRIPITION LIST:
+-------------------------------
+<dl>
+  <dt>description term</dt>
+  <dd>description data</dd>
+</dl>
+EX:
+----
+<dl>
+  <dt> bhargavi </dt>
+  <dd> chinni </dd>
+</dl> 
+LET US KNOW ABOUT ELEMENTS TO CREATE A TABLE:
+----------------------------------------------
+The <table> tag defines an HTML table
+the <tr> element defines a table row
+the <th> elememnt defines a table header
+the <td> element defines a table cell 
+SYNTAX:
+--------
+<table>
+<tr>
+ <th>Name</th>
+<th>city</th>
+<th>College</th>
+</tr>
+
+<tr>
+<td>bhagi</td>
+<td>vizag</td>
+<td>SDMSMK</td>
+</tr>
+
+<tr>
+<td>pandu</td>
+<td>tirupti</td>
+<td>kl university</td>
+</tr>
+</table>
+table border="1px">
+    <tr>
+        <th>age</th>
+        <th>serialno</th>
+        <th>rollno</th>
+        <th>name</th>
+        <th>city</th>
+        <th>college </th>
+    </tr>
+<tr>
+    <td>24</td>
+    <td>1</td>
+    <td>206532</td>
+    <td>bhagi</td>
+    <td>vizag </td>
+    <td>SDmSMk </td>
+</tr>
+<tr>
+    <td>22</td>
+    <td>2</td>
+    <td>206533</td>
+    <td>pandu</td>
+    <td>tirupati</td>
+    <td>kl university</td>
+</tr>
+</table>
+                        BLOG PREPARE :
+                      -----------------
+
+<marquee><b>Bhargavi's Biryani Blog</b></marquee>
+<b>welcome to the Blog!</b>
+<center>
+    <img src="https://img.freepik.com/premium-photo/dum-handi-chicken-biryani-is-prepared-earthen-clay-pot-called-haandi-popular-indian-non-vegetarian-food_466689-52403.jpg" alt="image" height="50%" width="50%"/>
+</center>
+<text>Biryani  is a mixed rice dish originating among the Muslims of the Indian subcontinent. It is made with Indian spices, rice, and usually some type of meat (chicken, beef, goat, lamb, prawn, and fish), or in some cases without any meat, and sometimes, in addition, eggs and potatoes.<br><br>Biryani is one of the most popular dishes in South Asia, as well as among the diaspora from the region. Similar dishes are also prepared in other parts of the world such as in Iraq, Myanmar, Thailand, and Malaysia.Biryani is the single most-ordered dish on Indian online food ordering and delivery services, and has been labelled as the most popular dish overall in India.
+</text>
+<br>
+<br>
+<b>Top 5 Best biryani's in the world</b>
+<table border=""1px">
+    <tr>
+        <th>serialNo</th>
+        <th>Ranking</th>
+        <th>BiryaniName</th>
+        
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>Chicken Biryani</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>2</td>
+    <td>Mutton Biryani</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>panner Biryani</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>4</td>
+    <td>Gown fish Biryani</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>5</td>
+    <td>Mushroom Biryani</td>
+</tr>
+</table>
+<br>
+<b>1.Mutton Biryani</b><br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9rlpUKoEWIzIvQjQrdXsFQvb0uTqnX3TgvA&usqp=CAU" alt="image"hegiht="40%"width="30%"/><a href="https://en.wikipedia.org/wiki/Biryani">Click here</a>
+<br>
+<text> mutton biryani became popular after Wajid Ali Shah. In the year 1856, Wajid Ali Shah, the 10th and last Nawab of Awadh, after having dethroned was exiled from Lucknow to the city of Kolkata by the British. He brought his cooks with himself and that is how biryani was introduced to Kolkata.<br><br>According to historic records, biryani has its origins in the kitchens of Mughals and is a combination of the Persian pilaf and also inspired by some Indian spicy rice dishes. Another interesting story tells us that when Mumtaz Mahal, wife of Shah Jahan saw that the army barracks were undernourished she ordered the cooks to prepare a nutritious balanced dish for them and hence, biryani was made.
+</text><br><br>
+<b>2.Mushroom Biryani</b><br>
+<img src="https://www.whiskaffair.com/wp-content/uploads/2014/07/Mushroom-Biryani-3-500x500.jpg" alt="image"hegiht="40%"width="30%"/><a href="https://www.indianhealthyrecipes.com/mushroom-biryani-recipe/">Click here</a>
+ <br>
+<text> Mushroom biryani is a delicious one pot dish made with rice, mushrooms, masala powder & herbs. Traditionally a biryani is made with meat.Not only do they provide a sense of chewiness and substance to a meal, but they have a high protein content and certain vitamins and minerals like iron, magnesium, potassium, sodium, and vitamin C.
+ </text>
+</body>
+</html>
+                           DAY-13/3(MONDAY)
+
+                        ------------------------
+
+INPUT IN HTML:(self closing tag)
+---------------
+The <input/tag specifies an input field where the user can enter the data
+
+
+
+TYPES IN INPUTS:
+---------------
+.Text
+.Number
+.checkbox
+.date
+.email
+.file
+.password
+.radio
+.submit
+.reset
+Ex:
+---
+<form>
+<input type="text" placeholder="enter your name"/>
+<input text="number" placeholder="enter your mobile number"/>
+<input type=checkbox"/>
+<input type="date"/>
+<inpu
+
+INTRODUCTION TO CSS:
+--------------------
+.css stands for cascading style sheets
+.css describes how HTML elements are to be displayed on screen,paper,or in other media
+.css saves a lot of work.it can control the layout of multiple web pages all at once
+.external stylesheets are stored in css files.
+
+SYNTAX OF CSS:
+-------------
+Selector {property:value;}
+     
+      selector      declaration               declaration
+        h1          {color:blue; font-size:12px;}
+                     property value  property value
+EX:
+---
+h1{
+color:red;
+text-align:center;
+}
+
+TYPES OF CSS:
+------------
+There are three ways to inserting a style sheet:
+.Internal css
+.External css
+.Inline css
+
+HOW TO CREATE EXTERNAL CSS:
+--------------------------
+An ecternal style sheet can be written in any text editor,and must be saved with a .css
+extension
+    this .css extension file is written in <link> tag
+SYNTAX:
+-------
+<link rel="stylesheet" href="your filename.css">
+
+
+IMPORTANT CSS PROPERTIES:
+------------------------
+.font-style
+.font-weight
+.text-decoration
+.border
+.border-width
+.bordder-color
+.border-radius
+.color
+.background-color
+.cursor
+.font-size
+.font-family
+.height
+.width
+.background-image
+.background-size
+.margin
+.padding
+
+SYNTAX:
+-------
+font-style:.normal
+           .italic
+           .oblique
+font-weight:
+text-decoration:underline;
+                overline;
+                line-through;
+border:solid;
+       dashed;
+        dotted;
+border-radius:0px;
+              10px;
+background-color:red;
+              color;
+cursor:
+font-size:
+width:100px;
+         50%;
+background-image:url('link address');
+background-size:cover;
+IMPORTANT CSS PROPERTIES:
+------------------------
+SYNTAX:
+------
+font-family:'Roboto';
+for accessing different types of fonts we use
+fonts.google.com
+From there we select our desired font copy our html code which we want to paste in our <head> part of html code
+Then we type font-fanily:'our desired font';in css
+body{
+    background-image:url('https://cdn.tollywood.net/wp-content/uploads/2020/10/This-Young-hero-to-fly-to-Mumbai-to-attend-Kajal-Aggarwal-wedding.jpg');
+    background-size:cover;
+    height:100vh;
+}
+.first {
+    color:blue;
+    font-size:80px;
+    font-family:'Roboto';
+
+}
+.highlight {
+    color:green;
+}
+
+                          DAY-16/3
+                      -------------
+SPAN ELEMENT:
+-------------
+.the <span> tag is an inline container used to mark up a part of a text,or a part of a document
+.the <span>tag is easily styled by css.
+SYNTAX:
+
+<h1> Email Id:<span>bhargavi@gmail.com</span></h1>
+
+CSS BOX MODEL:
+------------
+.In css ,the term :"box model" is used when talking about design and layout.
+.The css box model is essentially a box that wraps around every HTML element.it contains of:margins,borders,padding,and the actual content.The image below illustrates the box model.
+CONTENT:The content of the box,where text  and images appear
+-------
+PADDING:vlears an area around the content.The padding is transparent;
+--------
+ BORDER:A border that goes around the padding and content.
+-------        
+MARGIN:Clears the area outside the border .The margin is transparent.
+------
+                         margin
+                        border
+                        padding
+                       content
+                top margin
+                  
+
+                            DAY-27/3
+                          ------------
+
+HOW TO ACESS BOOTSTRAP:
+----------------------
+INTRODUCTION TO BOOTSTRAP WEBSITE:
+.for acessing bootstrap bundles first we want to go to getbootstrap.com
+.then paste the bundles in <head> part & above the body end tag</body>
+ex:
+example of a bootstrap code snippet:
+<button class="btn btn-primary"> click here</button>
+
+LAYOUT METHOS:
+------------
+Firstly Designing layouts as developer has huge demand in it industry
+we have mainly two types of layout methods:
+.flexbox(stable)
+.css grid(unstable)
+
+  INTRODUCTION TO FLEXBOX:
+--------------------------
+ the main purpose of  this flexbox is to arrange HTML elements  in horizontal/vertical direction
+
+FLEXBOX CONTAINER:
+-----------------
+.Firstly we will open a <div> tag and in class attribute we will start with d-flex to define our content is in a flex container
+.All HTML elements that are inside the flexbox container are called  flex items
+
+FLEXBOX DIRECTION:
+----------------
+.the flex directions specifies the direction  in which the flex  items should be arranged within the flexbox container
+.for defining the direction we will write flex-row or flex-column after the d-flex in class attribute
+
+JUSTIFY CONTENT:
+---------------
+.Justify content defines the alignment of flex items along the flex direction
+.For defining the alignment we will write justify-content-start or justify-content-center or justifu-content-end after the flex-row & d-flex in class attribute
+
+RESPONSEIVE BREAKPOINTS:
+------------------------
+WHAT ARE BREAKPOINTS?
+breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in bootstrap
+
+mainly devices are categorised into 5 types of responsive breakpoints.They are:
+.Extra samll devices
+.small devices
+.medium devices
+.large devices
+.extra large devices
+
+RESPONSIVE BREAKPOINTS:
+---------------------
+BREAKPOINT                                CLASS INFIX                  DIMENSIOND
+-----                                      -------                       -------
+X-small                                     none                         <576px
+small                                       sm                           >=576px
+medium                                      md                           >=768px                     
+large                                       lg                           >=992px
+extra large                                 xl                           >=1200px
+BOOTSTRAP GRID  SYSTEM
+---------------------
+ Bootstrap grid  system uses a series  of containers,rows,and columns to layout to layout and align content. it's bulit with flexbox and iis fully responsive
+bootstrap grid  system mainly works with
+.container 
+.row
+.column
+A countainer consists of a row and columns
+All the content should be placed inside the columns
+                     
+                                    DAY-8/4/23
+                                   -----------
+
+   INTRODUCTION TO JAVASCRIPT:     javascript is a scripting and programming lang
+-------------------------------
+Where we are using javascript?
+.for dynamic web pages
+.for sending data to servers
+.for storing information in variables
+.it completely helps to bulid websites
+.js is used to make dynamic webpages
+                            
+HOW TO START A JAVASCEIPT CODE?
+.For writing a JS code
+.firstly we have to take html file and save it then write <script> element in your <head> part to access your first program in JS
+
+VARIABLES:
+----------
+WHAT ARE VARIABLES?
+Variables are containers for storing data(storing data values)
+there are 4 ways to declare a javascript variables
+.using var                                                
+.using let 
+.using const
+.using nothing                                                
+ex:
+   var z="Java Script";
+   var y="march 8th";
+  var x="bhagi;
+console.log(num1)
+  console.log(num2)
+    
+  var num1=100
+        
+    let num2=200
+     console.log(num2)
+     num3=300
+  console.log(num3)
+     console.log(y)
+     console.log(z)
+  console.log(x)
+   let z=6655334890997633678
+   console.log(z)
+
+
+
+DATA TYPES:
+----------
+Javascript has 8 data types
+.String
+.Number
+.Bigint
+.Boolean
+.Undefined
+.Null
+.Symbol
+.Object
+OBJECT SYNTAX:
+-------------
+Let variable_name={
+key:value,
+key :value,
+.
+.
+.
+}
+        var pbscSdmk={
+            name:"bhagi",
+            age:20,
+            color:"fair",
+            gender:"female"
+
+        }
+        console.log(pbscSdmk)
+        console.log(pbscSdmk.name)
+
+OPERATORS:
+----------
+There are following types of operators in javascript:
+.arithmetic operators
+.comparision(relational) operators
+.bitwise operators
+.logical operators
+.assignment operators
+.special operators
+
+CONDITIONAL STATEMENTS:
+---------------------
+Javascript has mainly 3 conditional statements
+.if statement
+.else statement
+.else if statement
+
+DIALOG BOXES:
+-----------
+There are three types of dialog boxes supported in javascript that are alert,confirm,& prompt.
+These dialog boxes can be used to perform specific tasks such as raise an alert,to get confirmation of an event or an input, and to get input from the user
+        var a=alert("this is bhagi")
+        console.log(a)
+        var a=confirm("select yes or no")
+        console.log(a)
+        var a=prompt("enter a value")
+        console.log(a)
+LOOPS:
+------
+In javascript we have loops,which offer a qucik and easy way to do something repeatedly
+.while loop
+ex:
+        var f=5;  //initialization
+        while(f<=10){
+            console.log(f) //condition
+            f++; //iteration
+        }  
+o/p:
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+.do while loop
+.for loop
+Generally loops have initialization,condition,iteration
+INITIALIZATION : is where we start
+CONDITION: Is where to end and how to end
+ITERATION: is which helps to condition to execute
+
+
+ARRAY:
+------
+An array is a special variable ,which can hold more than one value
+SYNTAX:
+Let array_name=[item1,item2,....];
+
+FUNCTIONS:
+--------
+FUNCTION DECLARATION:
+---------------------
+.A FUNCTION DEFINITION(Aslo called a function declarition,or function statement) consists of the function keyword,follwed by:
+.The name of the function
+.A list of parameters to the function,enclosed in parentheses are separated by commas
+
+For example,the following code defines a simple function named square
+function square(number){
+return number*number;
+}
+.The function square takes one parameter,called number.The function consists of one statement that says to return the parameter of the function(that is,number) multiplied by itself.The statement return specifies the value returned by the function:
+return number*number;
+EXAMPLE:
+---------
+        function demo(){
+            console.log("hello world")
+        }
+        demo()
+O/P:
+----
+hello world
+                                   OR
+demo()
+        function demo(){
+            console.log("hello world")
+        }
+O/P:
+----
+hello world
+
+    <script type="text/javascript" src="second.js"></script>  (external  javascript)
+        var z="Java Script";
+        var y="march 8th";
+        var x="bhagi sai";
+        
+        console.log(num1)
+        
+        console.log(num2)
+    
+        var num1=100
+        
+         let num2=200
+        console.log(num2)
+        num3=300
+        console.log(num3)
+        console.log(y)
+        console.log(z)
+        console.log(x)
+        let z=6655334890997633678
+        console.log(z)
+PROGRAM (EVEN OR ODD):
+--------------------
+       var  a=15;
+        if( a%2==0){
+        console.log("even number")
+
+        }
+        else if (a%2!=0){
+            console.log("odd number")
+        }
+        else {
+            console.log("not a proper number")
+        }
+PROGRAM:
+-------
+Q)if age is < 5 print preentry,if age is >=5 and <18 print pay 10 rupees,if age is >=18 then ptint pay 20 rupees
+ O/P:
+-----
+         var age=28;
+        if (age<5){
+            console.log("free entry")
+
+        }
+        else if (age>=5 && age<18) {
+            console.log("pay 10 rupees")
+
+        }
+        else if(age>=18){
+            console.log("pay 20 rupees")
+
+        }
+
+        }
+PROGRAM:
+--------
+var a=8;
+if(a==="9"){                #====:strict means it takes not string value
+console.log("true")
+}
+else{
+console.log("false")
+}
+o/p:
+false
+        var a=8;
+        if(a=="8"){
+           console.log("true")
+}
+else{
+    console.log("false")
+}
+o/p:
+true
+program:
+--------
+        var a=[45,"javascript",true,56]
+        name={"bhagi"}
+        console.log(a)
+        console.log(a[1])
+o/p:
+----
+[45, 'javascript', true, 56]
+bhargavi.html:11 javascript
+
+                                           DAY-10/4/23
+                                            ---------
+
+EVENTS:
+-------
+    <script>
+        function ClickMe() {
+            alert("hi today is monday")
+        }
+
+    </script>
+</head>
+<body>
+    <h1>This is about Onclick Event</h1>
+    <button onclick="clickme()">submit</button>
+    
+    <script>
+        function ClickMe() {
+            alert("hi today is monday")
+        }
+
+    </script>
+</head>
+<body>
+    <h1>This is about Onclick Event</h1>
+    <button onclick="clickme()">submit</button>
+    
+    <script>
+        function thankyou(){
+            alert("hello")
+        }
+        
+
+    </script>
+</head>
+<body>
+    <h1> This is about  Validation</h1>
+    <form onsubmit="return thankyou()">
+        <input type="text"/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="Clear"/>
+    </form>

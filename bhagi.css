@@ -1,0 +1,17 @@
+.bgimg {
+    background-image:url("https://img.freepik.com/free-vector/display-template-with-smartphone_79603-1240.jpg?w=1060&t=st=1679981403~exp=1679982003~hmac=a55e9c3b1f20a50b967d0c2c6f0c4238f1ff6c46c7ac02d09e5272ec0d7441dc");
+    background-size:cover;
+    height:100vh;
+}
+.layoutcard {
+    background-color:white;
+    height:200px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    padding:20px;
+
+}
+
+
+
+

@@ -1,0 +1,9 @@
+.btnstyle {
+    color:red;
+    background-color:rgb(26, 26, 188);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 250px;
+    margin-left: 50px; 
+}

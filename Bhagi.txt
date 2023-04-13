@@ -1,0 +1,2730 @@
+          Day=24/2
+
+
+file=open('sample.txt','a')
+file.write('\nhi\n am fine\nwhats app')
+file.close()
+
+READ:
+
+file=open('sample.txt')
+k=file.read()     ( to show total content)
+print(k)
+file.close()
+
+READLINES:
+
+file=open('sample.txt')
+k=file.readlines()(content in list form)
+print(k)
+file.close()
+
+
+ import os
+#os.remove('sample.txt')
+print(os.getcwd())  (cwd:current working dir)
+
+
+import os
+#os.remove('sample.txt')
+#print(os.getcwd())
+print(os.listdir())
+for i in os.listdir():
+    print(i.endswith('.py'))
+          
+PROGRAM:
+
+prograns are a set of instructions for manipulating data ina meaningful way.
+object:
+.an entity or 'thing' in our program,often a noun         attributes:.class objects
+.ex of an object could be a single person                           .method objects
+properties:(objects)        behaviours:(methods)
+.name                       .talk
+.age                        .walk
+.address                    .breathe
+OOP core--->object(life time attributes carry data in the form of objects)--->properties or attributes   behaviour or methods
+CLASSES:
+.classes are used to create a object.
+.we can
+
+
+
+
+
+
+
+
+
+.isinstance =creating a object from class.
+EX:
+class dog:
+      pass
+i=dog()  (i=object of class dog)  #isinstatination
+p=dog()    (p=anther object)
+
+class dog:
+     def__init__(self,name,breed)
+        self.name=name                #self=it acts to the uniqe object points to the current class
+        self.brred=breed              #dunder methods= init  (class to know that state and inisilition use init method)
+o=dog('puppy','labrador')              #    construct=   to intilizition state of object
+po=dog('jummy','labrador')             #class contains collection of objects and represents blue print
+EX2:
+class man:
+#class attributes
+   species='Homosapiens'
+   def__init__(self,name,age,gender):    #class attribute
+       self.name=name
+       self.age=age
+       self.gender=gender
+h=man('bhagi',20,'f')
+j=man('ramya',21,'f')
+print(h.name)
+print(h.age)
+print(j.gender)
+h.name='kusu'
+j.name='kaveri'
+class employee:
+
+               Day-25/2
+
+
+
+
+for i in [1,2,3]
+      print(i)
+o/p:
+1
+2
+3
+students=['bhagi','kaki','kusu']
+marks=[100,86,90]
+s=zip(students,marks)        #combine two parallel types(zip)
+s
+<zip object at 0x000002D8EA6C3DC0>
+o/p:
+students=['bhagi','kaki','kusu']
+>>> marks=[100,86,90]
+>>> com=list(zip(students,marks))
+>>> com
+[('bhagi', 100), ('kaki', 86), ('kusu', 90)]
+>>>com=dict(zip(students,marks))
+com=tuple(zip(students,marks))
+h=['a','b','c','d']
+i=[9,6,4]
+j=zip(h,i)
+print(list(zip(h,i)))
+[('a', 9), ('b', 6), ('c', 4)]
+o=['j','l','o']
+h
+['a', 'b', 'c', 'd']
+i
+[9, 6, 4]
+y=list(zip(o,h,i))
+y
+[('j', 'a', 9), ('l', 'b', 6), ('o', 'c', 4)]
+
+u=o.sort()
+u
+print(u)
+None
+o
+['j', 'l', 'o']
+o=[2,5,-9,7,6]
+o
+[2, 5, -9, 7, 6]
+o.sort()
+o
+[-9, 2, 5, 6, 7]
+u=sorted(o)
+u
+[-9, 2, 5, 6, 7]
+
+#[exp for i in cont]
+#[exp for i in con if cond]
+#[exp if cond else expr for i in con]
+#{key:value for key,value in collec}
+lst=['a','b','c']
+for i,j in enumerate(lst):
+    print(i,j)
+
+    
+0 a
+1 b
+2 c
+
+k={i:j for i,j, in enumerate(lst)}
+k
+{0: 'a', 1: 'b', 2: 'c'}
+
+
+k={i:j for  i,j in enumerate(lst) if i%2==0}
+k
+{0: 'a', 2: 'c'}
+k={i:j for i,j in enumerate(lst) if i%2!=0}
+k
+{1: 'b'}
+
+p={i:j for k in range(int(input('enter no of items'))) for i in input('enter key').split() for j in input('enter value').split()}
+enter no of items4
+enter keybhagi
+enter value4
+enter keymastii
+enter value6
+enter keykaki
+enter value8
+enter keykusu
+enter value10
+p
+{'bhagi': '4', 'mastii': '6', 'kaki': '8', 'kusu': '10'}
+
+
+p={i:'pass' if int(j)>=35 else 'fail' for k in range(int(input('enter no of items'))) for i in input('enter key').split() for j in input('enter value').split()}
+enter no of items4
+enter keybhagi
+enter value45
+enter keykusu
+enter value56
+enter keykaki
+enter value30
+enter keymastii
+enter value35
+p
+{'bhagi': 'pass', 'kusu': 'pass', 'kaki': 'fail', 'mastii': 'pass'}
+
+                      Day-28/2
+DATATYPE:
+
+data type is a categorizes the data stored in a variable it tells complier or interperter the , promgrammer  wants to do with   that data.
+i.e operations etc
+
+Types of Data types
+numeric
+string:   char--255,varchar(m)-65k(non binary),binary,varbinary(binary strings),text,blob(extended version of varchar and varbinary),enum,set
+               text:tinytext-255(articels,product,reviews)       
+               chr-shortext ,mediumtext-whitepapers-16mb
+                   longtext-4gb-compter applications,scripts        blob:tinyblob-255b
+                                                                         blob-65535b
+                                                                         mediumblob-16777215b
+                                                                      longblob-4gb or 4294967285b
+
+
+  enum:should be one element from the list                    
+  set: (tickets booking)                                            
+
+Data time: date--'year-mm-dd'
+            time--'hh:mm:ss' or hhmmss or hhh:mm:ss
+             datetime-'yyyy-mm-dd hh:mm:ss'
+              timestamp
+              year--'yyyy'
+
+json(java script object notation)
+spatial( geograhipical ,space geometric etc)
+Numeric:
+integer:0,1,2,3....
+float:3.567
+decimal:(m,d)correct value m:total length of the point,d:length of after decimal point
+        types of integer:
+tinyint      -128to 127                       1          #precision:how many bytes to use
+smallint    -32768 to 32767                   2  
+mediumint  -8388608to 8388607                 3
+int        -2147483648 to 2147483647          4
+bigint        -2**63                          8
+ 
+
+                 creating table
+CREATE table table_name(col1 dtaype,col2 dtype,......coln dtype);
+ 
+                             Day-1/3
+  
+
+CRUD:
+C:CREATE
+R:READ
+U:UPDATE
+D:DELETE
+SELECT:Syntax
+     select column1,column2,..... from table_name where condition -->optional
+
+
+INSERT:
+insert into table_name values(col1val,col2val,...),(colval21,colval22,...),.....
+
+UPDATE:Syntax
+       update table_name set 
+DELETE:Syntax
+      delete from table_name where condition;
+ALTER:.RENAME
+      .DROP
+      .ADD
+      .MODIFY
+      .RENAME(COLUMN)
+      .CHANGE COLUMN
+ALTER-RENAME:Syntax
+alter table table_name rename new_tablename
+ALTER-ADD:Syntax columns
+alter table table_name add column_name dtype,add column_name2 dtype,...
+AFTER-DROP:Syntax
+alter table table_name add column_name dtype after|f,add column_name2 dtype,...
+DROP:Syntax
+ alter table table_name drop column column1_name,drop column column2_name,...;
+ALTER-MODIFY:Syntax
+alter table table_name modify column1_name new_dtype,modify column2_name new_dtype,......;
+ALTER-RENAME(COLUMN):Syntax
+alter table  table_name rename column old_columnname1 to newcolumnname1,rename column old_columnname2 to newcolumnname2,....;
+ALTER-CHANGE COLUMN:Syntax
+alter table table_name change column oldcolumnname newcolumnname dtype;
+
+     PRIMARY KEYS:
+   its a combination of both unique and not null it ensures that 
+   EX:andharnumber,licence,etc.
+
+      MYSQL:
+
+mysql> use emp;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_emp |
++---------------+
+| employee      |
+| student       |
+| students      |
+| test3         |
+| test7         |
+| whatsapp      |
++---------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from whatsapp;
++----------+---------+---------+------------+----------+
+| friend1  | friend2 | message | date       | time     |
++----------+---------+---------+------------+----------+
+| bhagi    | mastii  | hii     | 2023-02-28 | 00:00:12 |
+| bhagi    | pandu   | hello   | 2023-02-28 | 00:00:12 |
+| bhai     | chinni  | how r u | 2023-02-28 | 00:00:12 |
+| bhargavi | kusuma  | hiii    | 2023-02-28 | 00:00:13 |
+| bhar     | kaveri  | Hello   | 2023-02-28 | 00:00:12 |
+| bhagi    | mastii  | hii     | 2023-02-28 | 00:00:12 |
+| bhagi    | pandu   | hello   | 2023-02-28 | 12:45:00 |
+| bhai     | chinni  | how r u | 2023-02-28 | 12:40:00 |
+| bhargavi | kusuma  | hiii    | 2023-02-28 | 12:50:00 |
+| bhar     | kaveri  | Hello   | 2023-02-28 | 12:00:00 |
+| bhagi    | mastii  | hii     | 2023-02-28 | 00:00:12 |
+| bhagi    | pandu   | hello   | 2023-02-28 | 00:00:12 |
+| bhai     | chinni  | how r u | 2023-02-28 | 00:00:12 |
+| bhargavi | kusuma  | hiii    | 2023-02-28 | 00:00:13 |
+| bhar     | kaveri  | Hello   | 2023-02-28 | 00:00:12 |
++----------+---------+---------+------------+----------+
+15 rows in set (0.00 sec)
+
+mysql> truncate table whatsapp;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from whatsapp;
+Empty set (0.00 sec)
+
+mysql> desc test7;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id1   | decimal(9,8) | YES  |     | NULL    |       |
+| id2   | float(9,8)   | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc whatsapp;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| friend1 | varchar(30) | YES  |     | NULL    |       |
+| friend2 | varchar(30) | YES  |     | NULL    |       |
+| message | text        | YES  |     | NULL    |       |
+| date    | date        | YES  |     | NULL    |       |
+| time    | time        | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table BSC(id1 int, name char(50) not null);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc BSC;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id1   | int      | YES  |     | NULL    |       |
+| name  | char(50) | NO   |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into BSC(name) values('bhagi'),('pandu'),('mastii');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from BSC;
++------+--------+
+| id1  | name   |
++------+--------+
+| NULL | bhagi  |
+| NULL | pandu  |
+| NULL | mastii |
++------+--------+
+
+mysql> insert into BSc(id1) values(24),(12),(11);
+ERROR 1364 (HY000): Field 'name' doesn't have a default value
+mysql> insert into BSC(id1) values(12),(23),(34);
+ERROR 1364 (HY000): Field 'name' doesn't have a default value
+mysql> create table bhagi(id1 int,name char(50) not null default 'no name');
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc bhagi;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| id1   | int      | YES  |     | NULL    |       |
+| name  | char(50) | NO   |     | no name |       |
++-------+----------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into bhagi(id1) values(12),(18),(11),(3);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from bhagi;
++------+---------+
+| id1  | name    |
++------+---------+
+|   12 | no name |
+|   18 | no name |
+|   11 | no name |
+|    3 | no name |
++------+---------+
+4 rows in set (0.00 sec)
+
+mysql> create table orders(ordid varchar(20),product varchar(100),noofitems int,cname varchar(50),ordtotal smallint);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc orders;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ordid     | varchar(20)  | YES  |     | NULL    |       |
+| product   | varchar(100) | YES  |     | NULL    |       |
+| noofitems | int          | YES  |     | NULL    |       |
+| cname     | varchar(50)  | YES  |     | NULL    |       |
+| ordtotal  | smallint     | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into orders(ordid,product,noofitems,cname,ordtotal) values(2345122,'doll','5','bhagi',55),(4356764,'panda','3','pandu',44);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders;
++---------+---------+-----------+-------+----------+
+| ordid   | product | noofitems | cname | ordtotal |
++---------+---------+-----------+-------+----------+
+| 2345122 | doll    |         5 | bhagi |       55 |
+| 4356764 | panda   |         3 | pandu |       44 |
++---------+---------+-----------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select ordid,product,cname from orders;
++---------+---------+-------+
+| ordid   | product | cname |
++---------+---------+-------+
+| 2345122 | doll    | bhagi |
+| 4356764 | panda   | pandu |
++---------+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select ordid,ordtotal from orders;
++---------+----------+
+| ordid   | ordtotal |
++---------+----------+
+| 2345122 |       55 |
+| 4356764 |       44 |
++---------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from orders;
++---------+---------+-----------+-------+----------+
+| ordid   | product | noofitems | cname | ordtotal |
++---------+---------+-----------+-------+----------+
+| 2345122 | doll    |         5 | bhagi |       55 |
+| 4356764 | panda   |         3 | pandu |       44 |
++---------+---------+-----------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into orders(ordid,product,noofitems,cname,ordtotal) values(2356734,'xyz shampoo',5,'sai',345),(234576,'xyz shampoo', 6, 'bhargavi',3456),(4587634,'xyz shampoo',7,'kusuma',345);
+Query OK, 3 rows affected (0.04 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select product,ordtotal from orders where ordtotal>1000;
++-------------+----------+
+| product     | ordtotal |
++-------------+----------+
+| xyz shampoo |     3456 |
++-------------+----------+
+1 row in set (0.01 sec)
+
+mysql> select product,ordtotal from orders where ordtotal<1000;
++-------------+----------+
+| product     | ordtotal |
++-------------+----------+
+| doll        |       55 |
+| panda       |       44 |
+| xyz shampoo |      345 |
+| xyz shampoo |      345 |
++-------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from orders;
++---------+-------------+-----------+----------+----------+
+| ordid   | product     | noofitems | cname    | ordtotal |
++---------+-------------+-----------+----------+----------+
+| 2345122 | doll        |         5 | bhagi    |       55 |
+| 4356764 | panda       |         3 | pandu    |       44 |
+| 2356734 | xyz shampoo |         5 | sai      |      345 |
+| 234576  | xyz shampoo |         6 | bhargavi |     3456 |
+| 4587634 | xyz shampoo |         7 | kusuma   |      345 |
++---------+-------------+-----------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> create table codegnan(empid int,empname varchar(30),dept tinytext,salary int,dob date);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc codegnan;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(30) | YES  |     | NULL    |       |
+| dept    | tinytext    | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
+| dob     | date        | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into codegnan values(29567,'kaveri','it',54000,'2003-11-12'),(34456,'bhagi','hr',40000,'2002-08-18'),(23456,'mastii','pr',30000,'2002-06-19'),(34568,'sai','dr',90000,'1945-11-11');
+Query OK, 4 rows affected (0.04 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> update codegnan set empname='bhagi' where empid=34456;
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| bhagi   |
+| mastii  |
+| sai     |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> update codegnan set empname='pandu' where empid=34456;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| pandu   |
+| mastii  |
+| sai     |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> delete from codegnan where empname='sai';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| pandu   |
+| mastii  |
++---------+
+3 rows in set (0.00 sec)
+
+mysql> delete  from codegnan;
+Query OK, 3 rows affected (0.01 sec)
+
+mysql> select empname from codegnan;
+Empty set (0.00 sec)
+
+mysql> desc codegnan;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(30) | YES  |     | NULL    |       |
+| dept    | tinytext    | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
+| dob     | date        | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table codegnan rename sdmsmk;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++---------------+
+| Tables_in_emp |
++---------------+
+| bhagi         |
+| bsc           |
+| employee      |
+| orders        |
+| sdmsmk        |
+| student       |
+| students      |
+| test3         |
+| test7         |
+| whatsapp      |
++---------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table sdmsmk add place char(20);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(30) | YES  |     | NULL    |       |
+| dept    | tinytext    | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
+| dob     | date        | YES  |     | NULL    |       |
+| place   | char(20)    | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table sdmsmk add client tinytext after salary,add project varchar(100) first;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | int          | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| dept    | tinytext     | YES  |     | NULL    |       |
+| salary  | int          | YES  |     | NULL    |       |
+| client  | tinytext     | YES  |     | NULL    |       |
+| dob     | date         | YES  |     | NULL    |       |
+| place   | char(20)     | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+
+
+mysql> desc orders;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ordid     | varchar(20)  | YES  |     | NULL    |       |
+| product   | varchar(100) | YES  |     | NULL    |       |
+| noofitems | int          | YES  |     | NULL    |       |
+| cname     | varchar(50)  | YES  |     | NULL    |       |
+| ordtotal  | smallint     | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into orders(ordid,product,noofitems,cname,ordtotal) values(2345122,'doll','5','bhagi',55),(4356764,'panda','3','pandu',44);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders;
++---------+---------+-----------+-------+----------+
+| ordid   | product | noofitems | cname | ordtotal |
++---------+---------+-----------+-------+----------+
+| 2345122 | doll    |         5 | bhagi |       55 |
+| 4356764 | panda   |         3 | pandu |       44 |
++---------+---------+-----------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select ordid,product,cname from orders;
++---------+---------+-------+
+| ordid   | product | cname |
++---------+---------+-------+
+| 2345122 | doll    | bhagi |
+| 4356764 | panda   | pandu |
++---------+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select ordid,ordtotal from orders;
++---------+----------+
+| ordid   | ordtotal |
++---------+----------+
+| 2345122 |       55 |
+| 4356764 |       44 |
++---------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from orders;
++---------+---------+-----------+-------+----------+
+| ordid   | product | noofitems | cname | ordtotal |
++---------+---------+-----------+-------+----------+
+| 2345122 | doll    |         5 | bhagi |       55 |
+| 4356764 | panda   |         3 | pandu |       44 |
++---------+---------+-----------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into orders(ordid,product,noofitems,cname,ordtotal) values(2356734,'xyz shampoo',5,'sai',345),(234576,'xyz shampoo', 6, 'bhargavi',3456),(4587634,'xyz shampoo',7,'kusuma',345);
+Query OK, 3 rows affected (0.04 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select product,ordtotal from orders where ordtotal>1000;
++-------------+----------+
+| product     | ordtotal |
++-------------+----------+
+| xyz shampoo |     3456 |
++-------------+----------+
+1 row in set (0.01 sec)
+
+mysql> select product,ordtotal from orders where ordtotal<1000;
++-------------+----------+
+| product     | ordtotal |
++-------------+----------+
+| doll        |       55 |
+| panda       |       44 |
+| xyz shampoo |      345 |
+| xyz shampoo |      345 |
++-------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from orders;
++---------+-------------+-----------+----------+----------+
+| ordid   | product     | noofitems | cname    | ordtotal |
++---------+-------------+-----------+----------+----------+
+| 2345122 | doll        |         5 | bhagi    |       55 |
+| 4356764 | panda       |         3 | pandu    |       44 |
+| 2356734 | xyz shampoo |         5 | sai      |      345 |
+| 234576  | xyz shampoo |         6 | bhargavi |     3456 |
+| 4587634 | xyz shampoo |         7 | kusuma   |      345 |
++---------+-------------+-----------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> create table codegnan(empid int,empname varchar(30),dept tinytext,salary int,dob date);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc codegnan;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(30) | YES  |     | NULL    |       |
+| dept    | tinytext    | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
+| dob     | date        | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into codegnan values(29567,'kaveri','it',54000,'2003-11-12'),(34456,'bhagi','hr',40000,'2002-08-18'),(23456,'mastii','pr',30000,'2002-06-19'),(34568,'sai','dr',90000,'1945-11-11');
+Query OK, 4 rows affected (0.04 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> update codegnan set empname='bhagi' where empid=34456;
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| bhagi   |
+| mastii  |
+| sai     |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> update codegnan set empname='pandu' where empid=34456;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| pandu   |
+| mastii  |
+| sai     |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> delete from codegnan where empname='sai';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select empname from codegnan;
++---------+
+| empname |
++---------+
+| kaveri  |
+| pandu   |
+| mastii  |
++---------+
+3 rows in set (0.00 sec)
+
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | int          | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| dept    | tinytext     | YES  |     | NULL    |       |
+| salary  | int          | YES  |     | NULL    |       |
+| client  | tinytext     | YES  |     | NULL    |       |
+| dob     | date         | YES  |     | NULL    |       |
+| place   | char(20)     | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> drop column place;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column place' at line 1
+mysql> alter table sdmsmk;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> alter table sdmsmk drop column place;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | int          | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| dept    | tinytext     | YES  |     | NULL    |       |
+| salary  | int          | YES  |     | NULL    |       |
+| client  | tinytext     | YES  |     | NULL    |       |
+| dob     | date         | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> alter table sdmsmk drop column dept,drop column dob;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | int          | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| salary  | int          | YES  |     | NULL    |       |
+| client  | tinytext     | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table sdmsmk  modify salary bigint;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | int          | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| salary  | bigint       | YES  |     | NULL    |       |
+| client  | tinytext     | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table sdmsmk modify client  mediumtext,modify empid smallint;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sdmsmk;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| project | varchar(100) | YES  |     | NULL    |       |
+| empid   | smallint     | YES  |     | NULL    |       |
+| empname | varchar(30)  | YES  |     | NULL    |       |
+| salary  | bigint       | YES  |     | NULL    |       |
+| client  | mediumtext   | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>  alter table sdmsmk rename column client to client_org;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create table xyz(id int primary key,name varchar(50) not null);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc xyz;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | NO   | PRI | NULL    |       |
+| name  | varchar(50) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into xyz values(1,'bhagi'),(2,'mastii'),(2,'sai');
+ERROR 1062 (23000): Duplicate entry '2' for key 'xyz.PRIMARY'
+mysql> create table ABC(empid int,empname varchar(20),salary int,dept tinytext);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc ABC;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(20) | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
+| dept    | tinytext    | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into ABC values(2345,'bhagi',25000,'hr');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into ABC values(2675,'mastii',20000,'pr'),(6786,'kaveri',22000,'mr'),(2489,'kusu',50000,'hr'),(6793,'sai',18000,'it'),(1076,'pandu',24000,'pr');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from ABC;
++-------+---------+--------+------+
+| empid | empname | salary | dept |
++-------+---------+--------+------+
+|  2345 | bhagi   |  25000 | hr   |
+|  2675 | mastii  |  20000 | pr   |
+|  6786 | kaveri  |  22000 | mr   |
+|  2489 | kusu    |  50000 | hr   |
+|  6793 | sai     |  18000 | it   |
+|  1076 | pandu   |  24000 | pr   |
++-------+---------+--------+------+
+6 rows in set (0.00 sec)
+
+mysql> alter table ABC change column dept  staff samlltext;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'samlltext' at line 1
+mysql> alter table ABC change column salary to salary_total  mediumint;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'to salary_total  mediumint' at line 1
+mysql> alter table ABC change column salary  salary_total  mediumint;
+Query OK, 6 rows affected (0.08 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc ABC;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| empid        | int         | YES  |     | NULL    |       |
+| empname      | varchar(20) | YES  |     | NULL    |       |
+| salary_total | mediumint   | YES  |     | NULL    |       |
+| dept         | tinytext    | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table ABC change empid employee_id smallint;
+Query OK, 6 rows affected (0.08 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc ABC;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| employee_id  | smallint    | YES  |     | NULL    |       |
+| empname      | varchar(20) | YES  |     | NULL    |       |
+| salary_total | mediumint   | YES  |     | NULL    |       |
+| dept         | tinytext    | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> alter table ABC change column empname employee_name varchar(30),chang
+e column employee_id empid int;
+ERROR 1054 (42S22): Unknown column 'empname' in 'abc'
+mysql> alter table ABC change column  employee_name empname varchar(30),change column employee_id empid int;
+Query OK, 6 rows affected (0.07 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc ABC;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| empid        | int         | YES  |     | NULL    |       |
+| empname      | varchar(30) | YES  |     | NULL    |       |
+| salary_total | mediumint   | YES  |     | NULL    |       |
+| dept         | tinytext    | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from ABC;
++-------+---------+--------------+------+
+| empid | empname | salary_total | dept |
++-------+---------+--------------+------+
+|  2345 | bhagi   |        25000 | hr   |
+|  2675 | mastii  |        20000 | pr   |
+|  6786 | kaveri  |        22000 | mr   |
+|  2489 | kusu    |        50000 | hr   |
+|  6793 | sai     |        18000 | it   |
+|  1076 | pandu   |        24000 | pr   |
++-------+---------+--------------+------+
+6 rows in set (0.00 sec)
+
+                DAY-2/3
+
+> show databases;
++--------------------+
+| Database           |
++--------------------+
+| emp                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| std                |
+| sys                |
++--------------------+
+6 rows in set (0.02 sec)
+
+mysql> drop database std;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| emp                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+
+mysql> create database  python;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use python;
+Database changed
+mysql> create table python(stdid int primary key,name char(30),course varchar(10));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc python;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| stdid  | int         | NO   | PRI | NULL    |       |
+| name   | char(30)    | YES  |     | NULL    |       |
+| course | varchar(10) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> insert into python values(206532,'bhagi','BSC'),(206554,'mastii','BCA
+'),(206556,'pandu','BBA');
+Query OK, 3 rows affected (0.05 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from python;
++--------+--------+--------+
+| stdid  | name   | course |
++--------+--------+--------+
+| 206532 | bhagi  | BSC    |
+| 206554 | mastii | BCA    |
+| 206556 | pandu  | BBA    |
++--------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> drop table python;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table python(stdid int not null auto_increment primary key,name char(30),course varchar(10));
+Query OK, 0 rows affected (0.02 sec)
+
+
+
+mysql> insert into python(name,course) values('bhagi','BSC'),('pandu','BBA')
+,('mastii','BCA'),('sai','BCOM');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from python;
++-------+--------+--------+
+| stdid | name   | course |
++-------+--------+--------+
+|     1 | bhagi  | BSC    |
+|     2 | pandu  | BBA    |
+|     3 | mastii | BCA    |
+|     4 | sai    | BCOM   |
++-------+--------+--------+
+4 rows in set (0.00 sec)
+
+mysql> alter table python auto_increment=206532;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into python(name,course) values('bhagi','BSC'),('pandu','BBA')
+,('mastii','BCA'),('sai','BCOM');
+Query OK, 4 rows affected (0.04 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from python;
++--------+--------+--------+
+| stdid  | name   | course |
++--------+--------+--------+
+|      1 | bhagi  | BSC    |
+|      2 | pandu  | BBA    |
+|      3 | mastii | BCA    |
+|      4 | sai    | BCOM   |
+| 206532 | bhagi  | BSC    |
+| 206533 | pandu  | BBA    |
+| 206534 | mastii | BCA    |
+| 206535 | sai    | BCOM   |
++--------+--------+--------+
+8 rows in set (0.00 sec)
+
+AGGREGATE FUNCTIONS:combination of values
+               .SUM
+               .COUNT
+               .AVG
+               .MIN
+               .MAX
+ORDERBY: sorts the values
+
+
+ create table ecom_orders(ordid int not null auto_increment primary ke
+y,product tinytext,cname varchar(20),quqntity tinyint,total int,dop date,country char(20));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc ecom_orders;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| ordid    | int         | NO   | PRI | NULL    | auto_increment |
+| product  | tinytext    | YES  |     | NULL    |                |
+| cname    | varchar(20) | YES  |     | NULL    |                |
+| quqntity | tinyint     | YES  |     | NULL    |                |
+| total    | int         | YES  |     | NULL    |                |
+| dop      | date        | YES  |     | NULL    |                |
+| country  | char(20)    | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+
+mysql> alter table ecom_orders auto_increment=2157445;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into ecom_orders(product,cname,quqntity,total,dop,country) values('pens','ranjith',10,100,'2019-02-09','US'),('laptop','maheshbabu',1,49999,'2020-01-23','IN'),('table','kajal',1,1399,'2020-01-23','IN'),('speaker','ram',2,1099,'2019-09-10','NETHERLANDS'),('pens','raji',5,200,'2016-08-29','US');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+ select * from ecom_orders;
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157445 | pens    | ranjith    |       10 |   100 | 2019-02-09 | US          |
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
+| 2157449 | pens    | raji       |        5 |   200 | 2016-08-29 | US          |
++---------+---------+------------+----------+-------+------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select ordid,product from ecom_orders;
++---------+---------+
+| ordid   | product |
++---------+---------+
+| 2157445 | pens    |
+| 2157446 | laptop  |
+| 2157447 | table   |
+| 2157448 | speaker |
+| 2157449 | pens    |   
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select avg(quqntity) from ecom_orders;
++---------------+
+| avg(quqntity) |
++---------------+
+|        3.8000 |
++---------------+
+1 row in set (0.04 sec)
+
+mysql> select avg(quqntity) as avg from ecom_orders;
++--------+
+| avg    |
++--------+
+| 3.8000 |
++--------+
+1 row in set (0.00 sec)
+
+mysql>mysql> select avg(total) as avg_total from ecom_orders;
++------------+
+| avg_total  |
++------------+
+| 10559.4000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select country from ecom_orders;
++-------------+
+| country     |
++-------------+
+| US          |
+| IN          |
+| IN          |
+| NETHERLANDS |
+| US          |
++-------------+
+5 rows in set (0.00 sec)
+
+mysql> select count(*) from ecom_orders;
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select distinct country from ecom_orders;
++-------------+
+| country     |
++-------------+
+| US          |
+| IN          |
+| NETHERLANDS |
++-------------+
+3 rows in set (0.04 sec)
+
+mysql> select count(distinct country) from ecom_orders;
++-------------------------+
+| count(distinct country) |
++-------------------------+
+|                       3 |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql>mysql> select sum(total) as total from ecom_orders;
++-------+
+| total |
++-------+
+| 52797 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select sum(total) as pens_total from ecom_orders where product='pens';
++------------+
+| pens_total |
++------------+
+|        300 |
++------------+
+1 row in set (0.01 sec)
+
+mysql> select product,total from ecom_orders;
++---------+-------+
+| product | total |
++---------+-------+
+| pens    |   100 |
+| laptop  | 49999 |
+| table   |  1399 |
+| speaker |  1099 |
+| pens    |   200 |
++---------+-------+
+5 rows in set (0.00 sec)
+
+
+mysql> select sum(country) as total from ecom_orders where country='us';
++-------+
+| total |
++-------+
+|     0 |
++-------+
+1 row in set, 2 warnings (0.01 sec)
+
+mysql> select sum(total) as country_total  from ecom_orders where coun
+try='us';
++---------------+
+| country_total |
++---------------+
+|           300 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(total) as country_total  from ecom_orders where country='IN';
++---------------+
+| country_total |
++---------------+
+|         51398 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select country, sum(total) as country_total  from ecom_orders where country='IN';
++---------+---------------+
+| country | country_total |
++---------+---------------+
+| IN      |         51398 |
++---------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select max(total) from ecom_orders;
++------------+
+| max(total) |
++------------+
+|      49999 |
++------------+
+1 row in set (0.04 sec)
+
+mysql> select product,total from ecom_orders order by total asc;
++---------+-------+
+| product | total |
++---------+-------+
+| pens    |   100 |
+| pens    |   200 |
+| speaker |  1099 |
+| table   |  1399 |
+| laptop  | 49999 |
++---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select product,total from ecom_orders order by total asc limit
+1;
++---------+-------+
+| product | total |
++---------+-------+
+| pens    |   100 |
++---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select product,total from ecom_orders order by total des;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'des' at line 1
+mysql> select product,total from ecom_orders order by total desc;
++---------+-------+
+| product | total |
++---------+-------+
+| laptop  | 49999 |
+| table   |  1399 |
+| speaker |  1099 |
+| pens    |   200 |
+| pens    |   100 |
++---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select product,total from ecom_orders order by total desc limit
+ 1;
++---------+-------+
+| product | total |
++---------+-------+
+| laptop  | 49999 |
++---------+-------+
+1 row in set (0.00 sec)
+
+mysql>> select min(total) from ecom_orders;
++------------+
+| min(total) |
++------------+
+|        100 |
++------------+
+1 row in set (0.00 sec)
+                     COPYIG ONE FILE TO ANOTHER FILE:
+
+SYNTAX FOR IMPORT AND EXPORT:
+first create dump file.
+mysqldump -u root -p dbname>"c:\users\my pc\desktop\copyofinternship.sql
+source pathofdumpfile(change\-->/)
+mysql> create table whatsapp(sender varchar(50),receiver varchar(50),message
+ tinytext,time datetime default current_timestamp);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','sai','h
+iii');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','mastii','hello');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','pandu','how r u');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','kaki','
+how r u');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from whatsapp;
++--------+----------+---------+---------------------+
+| sender | receiver | message | time                |
++--------+----------+---------+---------------------+
+| bhagi  | sai      | hiii    | 2023-03-02 00:47:11 |
+| bhagi  | mastii   | hello   | 2023-03-02 00:47:39 |
+| bhagi  | pandu    | how r u | 2023-03-02 00:48:09 |
+| bhagi  | kaki     | how r u | 2023-03-02 00:48:28 |
++--------+----------+---------+---------------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','kusu','how r u');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from whatsapp;
++--------+----------+---------+---------------------+
+| sender | receiver | message | time                |
++--------+----------+---------+---------------------+
+| bhagi  | sai      | hiii    | 2023-03-02 00:47:11 |
+| bhagi  | mastii   | hello   | 2023-03-02 00:47:39 |
+| bhagi  | pandu    | how r u | 2023-03-02 00:48:09 |
+| bhagi  | kaki     | how r u | 2023-03-02 00:48:28 |
+| bhagi  | kusu     | how r u | 2023-03-02 12:51:39 |
++--------+----------+---------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%h:%i') as time from
+ whatsapp;
++--------+----------+---------+-------+
+| sender | receiver | message | time  |
++--------+----------+---------+-------+
+| bhagi  | sai      | hiii    | 12:47 |
+| bhagi  | mastii   | hello   | 12:47 |
+| bhagi  | pandu    | how r u | 12:48 |
+| bhagi  | kaki     | how r u | 12:48 |
+| bhagi  | kusu     | how r u | 12:51 |
++--------+----------+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%h:%i:%p') as time from whatsapp;
++--------+----------+---------+----------+
+| sender | receiver | message | time     |
++--------+----------+---------+----------+
+| bhagi  | sai      | hiii    | 12:47:AM |
+| bhagi  | mastii   | hello   | 12:47:AM |
+| bhagi  | pandu    | how r u | 12:48:AM |
+| bhagi  | kaki     | how r u | 12:48:AM |
+| bhagi  | kusu     | how r u | 12:51:PM |
++--------+----------+---------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%H:%i') as time from
+ whatsapp;
++--------+----------+---------+-------+
+| sender | receiver | message | time  |
++--------+----------+---------+-------+
+| bhagi  | sai      | hiii    | 00:47 |
+| bhagi  | mastii   | hello   | 00:47 |
+| bhagi  | pandu    | how r u | 00:48 |
+| bhagi  | kaki     | how r u | 00:48 |
+| bhagi  | kusu     | how r u | 12:51 |
++--------+----------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('sai','kusu','how r u');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from whatsapp;
++--------+----------+---------+---------------------+
+| sender | receiver | message | time                |
++--------+----------+---------+---------------------+
+| bhagi  | sai      | hiii    | 2023-03-02 00:47:11 |
+| bhagi  | mastii   | hello   | 2023-03-02 00:47:39 |
+| bhagi  | pandu    | how r u | 2023-03-02 00:48:09 |
+| bhagi  | kaki     | how r u | 2023-03-02 00:48:28 |
+| bhagi  | kusu     | how r u | 2023-03-02 12:51:39 |
+| sai    | kusu     | how r u | 2023-03-02 01:01:35 |
++--------+----------+---------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%H:%i') as time from whatsapp;
++--------+----------+---------+-------+
+| sender | receiver | message | time  |
++--------+----------+---------+-------+
+| bhagi  | sai      | hiii    | 00:47 |
+| bhagi  | mastii   | hello   | 00:47 |
+| bhagi  | pandu    | how r u | 00:48 |
+| bhagi  | kaki     | how r u | 00:48 |
+| bhagi  | kusu     | how r u | 12:51 |
+| sai    | kusu     | how r u | 01:01 |
++--------+----------+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> insert into whatsapp(sender,receiver,message) values('bhagi','kusu','how r u');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from whatsapp;
++--------+----------+---------+---------------------+
+| sender | receiver | message | time                |
++--------+----------+---------+---------------------+
+| bhagi  | sai      | hiii    | 2023-03-02 00:47:11 |
+| bhagi  | mastii   | hello   | 2023-03-02 00:47:39 |
+| bhagi  | pandu    | how r u | 2023-03-02 00:48:09 |
+| bhagi  | kaki     | how r u | 2023-03-02 00:48:28 |
+| bhagi  | kusu     | how r u | 2023-03-02 12:51:39 |
+| sai    | kusu     | how r u | 2023-03-02 01:01:35 |
+| bhagi  | kusu     | how r u | 2023-03-02 01:03:00 |
++--------+----------+---------+---------------------+
+7 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%b %y') as time from
+ whatsapp;
++--------+----------+---------+--------+
+| sender | receiver | message | time   |
++--------+----------+---------+--------+
+| bhagi  | sai      | hiii    | Mar 23 |
+| bhagi  | mastii   | hello   | Mar 23 |
+| bhagi  | pandu    | how r u | Mar 23 |
+| bhagi  | kaki     | how r u | Mar 23 |
+| bhagi  | kusu     | how r u | Mar 23 |
+| sai    | kusu     | how r u | Mar 23 |
+| bhagi  | kusu     | how r u | Mar 23 |
++--------+----------+---------+--------+
+7 rows in set (0.01 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%D %b %y') as time from whatsapp;
++--------+----------+---------+------------+
+| sender | receiver | message | time       |
++--------+----------+---------+------------+
+| bhagi  | sai      | hiii    | 2nd Mar 23 |
+| bhagi  | mastii   | hello   | 2nd Mar 23 |
+| bhagi  | pandu    | how r u | 2nd Mar 23 |
+| bhagi  | kaki     | how r u | 2nd Mar 23 |
+| bhagi  | kusu     | how r u | 2nd Mar 23 |
+| sai    | kusu     | how r u | 2nd Mar 23 |
+| bhagi  | kusu     | how r u | 2nd Mar 23 |
++--------+----------+---------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%a %M %y') as time from whatsapp;
++--------+----------+---------+--------------+
+| sender | receiver | message | time         |
++--------+----------+---------+--------------+
+| bhagi  | sai      | hiii    | Thu March 23 |
+| bhagi  | mastii   | hello   | Thu March 23 |
+| bhagi  | pandu    | how r u | Thu March 23 |
+| bhagi  | kaki     | how r u | Thu March 23 |
+| bhagi  | kusu     | how r u | Thu March 23 |
+| sai    | kusu     | how r u | Thu March 23 |
+| bhagi  | kusu     | how r u | Thu March 23 |
++--------+----------+---------+--------------+
+7 rows in set (0.04 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%b %M %y') as time from whatsapp;
++--------+----------+---------+--------------+
+| sender | receiver | message | time         |
++--------+----------+---------+--------------+
+| bhagi  | sai      | hiii    | Mar March 23 |
+| bhagi  | mastii   | hello   | Mar March 23 |
+| bhagi  | pandu    | how r u | Mar March 23 |
+| bhagi  | kaki     | how r u | Mar March 23 |
+| bhagi  | kusu     | how r u | Mar March 23 |
+| sai    | kusu     | how r u | Mar March 23 |
+| bhagi  | kusu     | how r u | Mar March 23 |
++--------+----------+---------+--------------+
+7 rows in set (0.00 sec)
+
+mysql> select sender,receiver,message,date_format(time,'%b. %M. %y') as time from whatsapp;
++--------+----------+---------+----------------+
+| sender | receiver | message | time           |
++--------+----------+---------+----------------+
+| bhagi  | sai      | hiii    | Mar. March. 23 |
+| bhagi  | mastii   | hello   | Mar. March. 23 |
+| bhagi  | pandu    | how r u | Mar. March. 23 |
+| bhagi  | kaki     | how r u | Mar. March. 23 |
+| bhagi  | kusu     | how r u | Mar. March. 23 |
+| sai    | kusu     | how r u | Mar. March. 23 |
+| bhagi  | kusu     | how r u | Mar. March. 23 |
++--------+----------+---------+----------------+
+7 rows in set (0.00 sec)
+
+                 DAY-3/3
+
+   GRUOPBY:
+
+ mysql> use python;
+Database changed
+mysql> desc ecom_orders;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| ordid    | int         | NO   | PRI | NULL    | auto_increment |
+| product  | tinytext    | YES  |     | NULL    |                |
+| cname    | varchar(20) | YES  |     | NULL    |                |
+| quqntity | tinyint     | YES  |     | NULL    |                |
+| total    | int         | YES  |     | NULL    |                |
+| dop      | date        | YES  |     | NULL    |                |
+| country  | char(20)    | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+7 rows in set (0.02 sec)
+
+mysql> select product from ecom_orders;
++---------+
+| product |
++---------+
+| pens    |
+| laptop  |
+| table   |
+| speaker |
+| pens    |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select product,sum(total) as product_revenue from ecom_orders group by product;
++---------+-----------------+
+| product | product_revenue |
++---------+-----------------+
+| pens    |             300 |
+| laptop  |           49999 |
+| table   |            1399 |
+| speaker |            1099 |
++---------+-----------------+
+4 rows in set (0.04 sec)
+
+mysql> select product,sum(total) as product_revenue from ecom_orders  product;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'python.product.product'; this is incompatible with sql_mode=only_full_group_by
+mysql> select product,sum(total) as product_revenue from ecom_orders  product;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'python.product.product'; this is incompatible with sql_mode=only_full_group_by
+mysql> select country,sum(total) as country_total from ecom_orders group by
+country;
++-------------+---------------+
+| country     | country_total |
++-------------+---------------+
+| US          |           300 |
+| IN          |         51398 |
+| NETHERLANDS |          1099 |
++-------------+---------------+
+3 rows in set (0.00 sec)
+
+mysql> select product,country,total from ecom_orders;
++---------+-------------+-------+
+| product | country     | total |
++---------+-------------+-------+
+| pens    | US          |   100 |
+| laptop  | IN          | 49999 |
+| table   | IN          |  1399 |
+| speaker | NETHERLANDS |  1099 |
+| pens    | US          |   200 |
++---------+-------------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select country,sum(total) as country_revenue from ecom_orders group by country order by country_revenue;
++-------------+-----------------+
+| country     | country_revenue |
++-------------+-----------------+
+| US          |             300 |
+| NETHERLANDS |            1099 |
+| IN          |           51398 |
++-------------+-----------------+
+3 rows in set (0.00 sec)
+
+mysql> select country,sum(total) as country_revenue from ecom_orders group by country order by country_revenue desc limit 2;
++-------------+-----------------+
+| country     | country_revenue |
++-------------+-----------------+
+| IN          |           51398 |
+| NETHERLANDS |            1099 |
++-------------+-----------------+
+2 rows in set (0.00 sec)
+
+mysql> select product,sum(quqntity) as total_items,sum(total) as product_revenue from ecom_orders group by product;
++---------+-------------+-----------------+
+| product | total_items | product_revenue |
++---------+-------------+-----------------+
+| pens    |          15 |             300 |
+| laptop  |           1 |           49999 |
+| table   |           1 |            1399 |
+| speaker |           2 |            1099 |
++---------+-------------+-----------------+
+4 rows in set (0.00 sec)
+
+mysql> create table facalty(dept varchar(30),name char(20),salary int);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> alter table facalty add place varchar(20);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc facalty;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| dept   | varchar(30) | YES  |     | NULL    |       |
+| name   | char(20)    | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
+| place  | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into values('csc','bhagi',20000,'vij'),('it','mastii',25000,'hud'),('telugu','sai',50000,'hyd'),('csc','kusu',40000,'ka'),('ds','kaki',25000,'mum');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values('csc','bhagi',20000,'vij'),('it','mastii',25000,'hud'),('telugu','sai',50' at line 1
+mysql> insert into values('csc','bhagi',20000,'vij'),('it','mastii',25000,'hyd'),('telugu','sai',50000,'hyd'),('csc','kusu',40000,'ka'),('ds','kaki',25000,'mum');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values('csc','bhagi',20000,'vij'),('it','mastii',25000,'hyd'),('telugu','sai',50' at line 1
+mysql> insert into facalty values('csc','bhagi',20000,'vij'),('it','mastii',25000,'hyd'),('telugu','sai',50000,'hyd'),('csc','kusu',40000,'ka'),('ds','kaki',25000,'mum');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select dept,sum(salary) as total_pay from facalty where dept='csc' group by  dept;
++------+-----------+
+| dept | total_pay |
++------+-----------+
+| csc  |     60000 |
++------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select place,sum(salary)  as total_pay from facalty group by place;
++-------+-----------+
+| place | total_pay |
++-------+-----------+
+| vij   |     20000 |
+| hyd   |     75000 |
+| ka    |     40000 |
+| mum   |     25000 |
++-------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select dept,sum(salary) as total_pay from facalty  group by  dept;
++--------+-----------+
+| dept   | total_pay |
++--------+-----------+
+| csc    |     60000 |
+| it     |     25000 |
+| telugu |     50000 |
+| ds     |     25000 |
++--------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> create table new_fac like facalty;1
+Query OK, 0 rows affected (0.02 sec)
+
+    -> create table new_fac like facalty1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+create table new_fac like facalty1' at line 1
+mysql> create table new_fac like facalty;1
+ERROR 1050 (42S01): Table 'new_fac' already exists
+    -> ^C
+mysql> select * from new_fac;
+Empty set (0.00 sec)
+
+mysql> insert into new_fac select * from facalty;
+Query OK, 5 rows affected (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from new_fac;
++--------+--------+--------+-------+
+| dept   | name   | salary | place |
++--------+--------+--------+-------+
+| csc    | bhagi  |  20000 | vij   |
+| it     | mastii |  25000 | hyd   |
+| telugu | sai    |  50000 | hyd   |
+| csc    | kusu   |  40000 | ka    |
+| ds     | kaki   |  25000 | mum   |
++--------+--------+--------+-------+
+5 rows in set (0.00 sec)
+
+mysql> truncate table new_fac;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into new_fac select * from facalty where dept='csc';
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from new_fac;
++------+-------+--------+-------+
+| dept | name  | salary | place |
++------+-------+--------+-------+
+| csc  | bhagi |  20000 | vij   |
+| csc  | kusu  |  40000 | ka    |
++------+-------+--------+-------+
+2 rows in set (0.00 sec)
+
+
+
+OPERATORS IN MYSQL:.ARTHIMETIC OPERATORS :+,-,*,(div)(interger division)/(float),%(mod)
+                   .LOGICAL OPERATORS    :AND or &&  OR or ||,between,in()
+                   .ASSIGNMENT OPERATORS :=,:=
+                   .COMPARISION OPERATORS::>,<,>=,<=,!=,NOT or <>
+
+         
+mysql> select 1+2;
++-----+
+| 1+2 |
++-----+
+|   3 |
++-----+
+1 row in set (0.00 sec)  
+
+mysql> select 6/9;   
++--------+
+| 6/9    |
++--------+
+| 0.6667 |
++--------+
+1 row in set (0.04 sec)
+
+mysql> select 6 div 9;
++---------+
+| 6 div 9 |
++---------+
+|       0 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select 6-9;
++-----+
+| 6-9 |
++-----+
+|  -3 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select 6%3;
++------+
+| 6%3  |
++------+
+|    0 |
++------+
+1 row in set (0.00 sec)
+
+
+mysql> select (6*6)+8;
++---------+
+| (6*6)+8 |
++---------+
+|      44 |
++---------+
+1 row in set (0.00 sec)
+
+  select  product,total from ecom_orders;
++---------+-------+
+| product | total |
++---------+-------+
+| pens    |   100 |
+| laptop  | 49999 |
+| table   |  1399 |
+| speaker |  1099 |
+| pens    |   200 |
++---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total<1000;
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
+| 2157449 | pens    | raji    |        5 |   200 | 2016-08-29 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total<100;
+Empty set (0.00 sec)
+
+mysql> select * from ecom_orders where total=100;
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from ecom_orders where total<=100;
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+1 row in set (0.01 sec)
+
+mysql> select * from ecom_orders where total>=1000;
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
++---------+---------+------------+----------+-------+------------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total>=1000 and total<1500
+;
++---------+---------+-------+----------+-------+------------+-------------+
+| ordid   | product | cname | quqntity | total | dop        | country     |
++---------+---------+-------+----------+-------+------------+-------------+
+| 2157447 | table   | kajal |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram   |        2 |  1099 | 2019-09-10 | NETHERLANDS |
++---------+---------+-------+----------+-------+------------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total between 1000 and 1500;
++---------+---------+-------+----------+-------+------------+-------------+
+| ordid   | product | cname | quqntity | total | dop        | country     |
++---------+---------+-------+----------+-------+------------+-------------+
+| 2157447 | table   | kajal |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram   |        2 |  1099 | 2019-09-10 | NETHERLANDS |
++---------+---------+-------+----------+-------+------------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total!=100;
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
+| 2157449 | pens    | raji       |        5 |   200 | 2016-08-29 | US          |
++---------+---------+------------+----------+-------+------------+-------------+
+4 rows in set (0.00 sec)
+
+                           OR USE <>:
+
+ select * from ecom_orders where total<>100;
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
+| 2157449 | pens    | raji       |        5 |   200 | 2016-08-29 | US          |
++---------+---------+------------+----------+-------+------------+-------------+
+
+ 
+| mysql> select * from ecom_orders where product='pens' or product='table';
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
+| 2157447 | table   | kajal   |        1 |  1399 | 2020-01-23 | IN      |
+| 2157449 | pens    | raji    |        5 |   200 | 2016-08-29 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where product in(pens,table);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table)' at line 1
+mysql> select * from ecom_orders where product in('pens','table');
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
+| 2157447 | table   | kajal   |        1 |  1399 | 2020-01-23 | IN      |
+| 2157449 | pens    | raji    |        5 |   200 | 2016-08-29 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where product  not in('pens','table');
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
++---------+---------+------------+----------+-------+------------+-------------+
+                 ASSIGN VALUES TO VARBLES:
+mysql> set  @var1:=11;
+Query OK, 0 rows affected (0.00 sec)
+         DISPLAY:
+ SELECT @VAR1;
++-------+
+| @VAR1 |
++-------+
+|    11 |
++-------+
+
+
+mysql>  create table insta(userid varchar(15) primary key ,na
+me varchar(15),mobile  bigint unique);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc insta;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| userid | varchar(15) | NO   | PRI | NULL    |       |
+| name   | varchar(15) | YES  |     | NULL    |       |
+| mobile | bigint      | YES  | UNI | NULL    |       |
+
+
+mysql> alter table insta drop column name;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table insta add  first_name char(20) after useri
+d,add middle_name varchar(25) after first_name,add last_name
+varchar(10) after middle_name;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc insta;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| userid      | varchar(15) | NO   | PRI | NULL    |       |
+| first_name  | char(20)    | YES  |     | NULL    |       |
+| middle_name | varchar(25) | YES  |     | NULL    |       |
+| last_name   | varchar(10) | YES  |     | NULL    |       |
+| mobile      | bigint      | YES  | UNI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into insta(userid,first_name,last_name,mobile)
+values('bhargavi@8','bhagi','sai',9966687987);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into insta values('mastii@hgt','mastii','shaik'
+,'bee',9989164586);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from insta;
++------------+------------+-------------+-----------+------------+
+| userid     | first_name | middle_name | last_name | mobile     |
++------------+------------+-------------+-----------+------------+
+| bhargavi@8 | bhagi      | NULL        | sai       | 9966687987 |
+| mastii@hgt | mastii     | shaik       | bee       | 9989164586 |
++------------+------------+-------------+-----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select concat(first_name,middle_name,last_name) as ful
+l_name from insta;
++----------------+
+| full_name      |
++----------------+
+| NULL           |
+| mastiishaikbee |
++----------------+
+2 rows in set (0.00 sec)
+
+                     CONCATE:(IF ONE VALUE NULL IT GIVES NULL )
+
+mysql> select concat(first_name, ' ',middle_name,' ',last_name) as full_name from insta;
++------------------+
+| full_name        |
++------------------+
+| NULL             |
+| mastii shaik bee |
++------------------+
+2 rows in set (0.00 sec)
+                    CONCATE_WS(WORD SEP):(IT VOMITS NULL VALUES)
+
+mysql> select concat_ws(' ',first_name,middle_name,last_name) as full_name from insta;
++------------------+
+| full_name        |
++------------------+
+| bhagi sai        |
+| mastii shaik bee |
++------------------+
+2 rows in set (0.00 sec)
+              RELATIONS B/W TABLES in DBMS:
+
+FOREIGN KEY: ITS A CONSTRAIN IMPOSED ON A FEILD OR COLUMN TO MAKE RELATIONSHIP B/W TWO TABLES:
+-----------
+    .ONE TO ONE OR 1:1students rollno,person andhar no
+    .ONE TO MANY OR 1:M(MOSTLY USED RELATION) one item buy many customers,teacher and students
+    .MANY TO MANY OR M:M students and courses 
+  SYNTAX:
+  ------
+ foreign key(column) reference parent_tablename(pri_key_column)
+referntial action- update,delete
+.on update:
+cascade|set default|restrict|no action|set null
+.on delete:
+cascade|set default|restrict|no action|set null
+
+create table customers(mobile varchar(10) primary key,
+name  char(50),address tinytext,country char(20));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table orders(ordid mediumint primary key,mobile varchar(10) ,product varchar(45),cost int,foreign key(mobile) references customers(mobile));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into customers values('97987874','yamini','one town','IN'),('4575462','hariks','numma','uk');
+Query OK, 2 rows affected (0.04 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+                    DAY-4/3
+  
+
+COMPOND KEY:Syntax:
+------------   
+
+
+its a primary key its consists two or more columns.
+mysql> use python;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_python |
++------------------+
+| customers        |
+| ecom_orders      |
+| facalty          |
+| insta            |
+| new_fac          |
+| orders           |
+| python           |
++------------------+
+7 rows in set (0.01 sec)
+
+mysql> create table students(stdid int primary key,name varchar(30),course char(10));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table projects(projname char(50),id int,dept char(10),primary
+key(projname,id),foreign key(id) references students(stdid));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc projects;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| projname | char(50) | NO   | PRI | NULL    |       |
+| id       | int      | NO   | PRI | NULL    |       |
+| dept     | char(10) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc students;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| stdid  | int         | NO   | PRI | NULL    |       |
+| name   | varchar(30) | YES  |     | NULL    |       |
+| course | char(10)    | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into students values(20123,'renuka','bsc'),(20569,'rahul','bca
+'),(20189,'madhava','bsc'),(20149,'bhagi','bsc'),(20863,'sai','ba'),(20698,'
+mastii','bsc');
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> insert into projects values('library management system ',20123,'csc')
+,('library management system',20123,'csc');
+ERROR 1062 (23000): Duplicate entry 'library management system-20123' for key 'projects.PRIMARY'
+mysql> insert into projects values('library management system ',20149,'csc')
+;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc projects;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| projname | char(50) | NO   | PRI | NULL    |       |
+| id       | int      | NO   | PRI | NULL    |       |
+| dept     | char(10) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from projects;
++---------------------------+-------+------+
+| projname                  | id    | dept |
++---------------------------+-------+------+
+| library management system | 20149 | csc  |
++---------------------------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into projects values('library management system ',20123,'csc');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from projects;
++---------------------------+-------+------+
+| projname                  | id    | dept |
++---------------------------+-------+------+
+| library management system | 20123 | csc  |
+| library management system | 20149 | csc  |
++---------------------------+-------+------+
+2 rows in set (0.00 sec)
+
+mysql> insert into projects values('result management ',20698,'it'),('result management', 20863,'ai7ml');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> delete from students where stdid=20123;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`python`.`projects`, CONSTRAINT `projects_ibfk_1` FOREIGN KEY (`id`) REFERENCES `students` (`stdid`))
+mysql> alter table projects drop constraint projects_ibfk_1;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table projects add constraint projrelation foreign key(id) refe
+rences students(stdid) on update cascade  on delete cascade;
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select 8 from students;
++---+
+| 8 |
++---+
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
++---+
+6 rows in set (0.00 sec)
+
+mysql> select * from students;
++-------+---------+--------+
+| stdid | name    | course |
++-------+---------+--------+
+| 20123 | renuka  | bsc    |
+| 20149 | bhagi   | bsc    |
+| 20189 | madhava | bsc    |
+| 20569 | rahul   | bca    |
+| 20698 | mastii  | bsc    |
+| 20863 | sai     | ba     |
++-------+---------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select * from projects;
++---------------------------+-------+-------+
+| projname                  | id    | dept  |
++---------------------------+-------+-------+
+| library management system | 20123 | csc   |
+| library management system | 20149 | csc   |
+| result management         | 20698 | it    |
+| result management         | 20863 | ai7ml |
++---------------------------+-------+-------+
+4 rows in set (0.00 sec)
+
+mysql> delete from students where stdid=20123;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from students;
++-------+---------+--------+
+| stdid | name    | course |
++-------+---------+--------+
+| 20149 | bhagi   | bsc    |
+| 20189 | madhava | bsc    |
+| 20569 | rahul   | bca    |
+| 20698 | mastii  | bsc    |
+| 20863 | sai     | ba     |
++-------+---------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from projects;
++---------------------------+-------+-------+
+| projname                  | id    | dept  |
++---------------------------+-------+-------+
+| library management system | 20149 | csc   |
+| result management         | 20698 | it    |
+| result management         | 20863 | ai7ml |
++---------------------------+-------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders;
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157445 | pens    | ranjith    |       10 |   100 | 2019-02-09 | US          |
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
+| 2157449 | pens    | raji       |        5 |   200 | 2016-08-29 | US          |
++---------+---------+------------+----------+-------+------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ecom_orders where total=(select max(total) from ecom_or
+ders);
++---------+---------+------------+----------+-------+------------+---------+
+| ordid   | product | cname      | quqntity | total | dop        | country |
++---------+---------+------------+----------+-------+------------+---------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN      |
++---------+---------+------------+----------+-------+------------+---------+
+1 row in set (0.01 sec)
+
+mysql> select * from ecom_orders where total=(select min(total) from ecom_orders);
++---------+---------+---------+----------+-------+------------+---------+
+| ordid   | product | cname   | quqntity | total | dop        | country |
++---------+---------+---------+----------+-------+------------+---------+
+| 2157445 | pens    | ranjith |       10 |   100 | 2019-02-09 | US      |
++---------+---------+---------+----------+-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from ecom_orders where total in (select total from ecom_orde
+rs where total>100);
++---------+---------+------------+----------+-------+------------+-------------+
+| ordid   | product | cname      | quqntity | total | dop        | country     |
++---------+---------+------------+----------+-------+------------+-------------+
+| 2157446 | laptop  | maheshbabu |        1 | 49999 | 2020-01-23 | IN          |
+| 2157447 | table   | kajal      |        1 |  1399 | 2020-01-23 | IN          |
+| 2157448 | speaker | ram        |        2 |  1099 | 2019-09-10 | NETHERLANDS |
+| 2157449 | pens    | raji       |        5 |   200 | 2016-08-29 | US          |
++---------+---------+------------+----------+-------+------------+-------------+
+4 rows in set (0.00 sec)
+
+
+ select * from orders;
+Empty set (0.00 sec)
+
+mysql> insert into orders values(9897,'97987874','oil',89),(2345,'99896789',
+'milk',78);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`python`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`mobile`) REFERENCES `customers` (`mobile`))
+mysql> insert into customers values('658954','suma','hyd','uk'),('245445','a
+nil','vij','in');
+Query OK, 2 rows affected (0.04 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into orders values(857457,'658954','wallpaper',5895),(1454589,
+'245445','mobile',454554);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders;
++---------+--------+-----------+--------+
+| ordid   | mobile | product   | cost   |
++---------+--------+-----------+--------+
+|  857457 | 658954 | wallpaper |   5895 |
+| 1454589 | 245445 | mobile    | 454554 |
++---------+--------+-----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> insert into orders values(9897,'97987874','oil',89),(97987,'97987874','milk',56);
+Query OK, 2 rows affected (0.04 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders;
++---------+----------+-----------+--------+
+| ordid   | mobile   | product   | cost   |
++---------+----------+-----------+--------+
+|    9897 | 97987874 | oil       |     89 |
+|   97987 | 97987874 | milk      |     56 |
+|  857457 | 658954   | wallpaper |   5895 |
+| 1454589 | 245445   | mobile    | 454554 |
++---------+----------+-----------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customers;
++----------+--------+----------+---------+
+| mobile   | name   | address  | country |
++----------+--------+----------+---------+
+| 245445   | anil   | vij      | in      |
+| 4575462  | hariks | numma    | uk      |
+| 658954   | suma   | hyd      | uk      |
+| 97987874 | yamini | one town | IN      |
++----------+--------+----------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customers where mobile=(select mobile from orders where cost=(select max(cost) from orders));
++--------+------+---------+---------+
+| mobile | name | address | country |
++--------+------+---------+---------+
+| 245445 | anil | vij     | in      |
++--------+------+---------+---------+
+1 row in set (0.04 sec)
+
+ JOINS:
+ -------
+TO fecth impormation from two or more tables.
+
+ TYPES OF JOINS:
+    ---------------
+
+       .CROSS JOIN 
+       .INNER JOIN
+       .OUTER JOIN--LEFT OUTER JOIN or LEFT JOIN RIGHT OUTER JOIN or RIGHT JOIN
+
+
+mysql> select country,ordid,cost from customers,orders;
++---------+---------+--------+
+| country | ordid   | cost   |
++---------+---------+--------+
+| IN      |    9897 |     89 |
+| uk      |    9897 |     89 |
+| uk      |    9897 |     89 |
+| in      |    9897 |     89 |
+| IN      |   97987 |     56 |
+| uk      |   97987 |     56 |
+| uk      |   97987 |     56 |
+| in      |   97987 |     56 |
+| IN      |  857457 |   5895 |
+| uk      |  857457 |   5895 |
+| uk      |  857457 |   5895 |
+| in      |  857457 |   5895 |
+| IN      | 1454589 | 454554 |
+| uk      | 1454589 | 454554 |
+| uk      | 1454589 | 454554 |
+| in      | 1454589 | 454554 |
++---------+---------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select * from customers cross join  orders;
++----------+--------+----------+---------+---------+----------+-----------+--------+
+| mobile   | name   | address  | country | ordid   | mobile   | product   | cost   |
++----------+--------+----------+---------+---------+----------+-----------+--------+
+| 97987874 | yamini | one town | IN      |    9897 | 97987874 | oil       |     89 |
+| 658954   | suma   | hyd      | uk      |    9897 | 97987874 | oil       |     89 |
+| 4575462  | hariks | numma    | uk      |    9897 | 97987874 | oil       |     89 |
+| 245445   | anil   | vij      | in      |    9897 | 97987874 | oil       |     89 |
+| 97987874 | yamini | one town | IN      |   97987 | 97987874 | milk      |
+    56 |
+| 658954   | suma   | hyd      | uk      |   97987 | 97987874 | milk      |     56 |
+| 4575462  | hariks | numma    | uk      |   97987 | 97987874 | milk      |     56 |
+| 245445   | anil   | vij      | in      |   97987 | 97987874 | milk      |     56 |
+| 97987874 | yamini | one town | IN      |  857457 | 658954   | wallpaper |   5895 |
+| 658954   | suma   | hyd      | uk      |  857457 | 658954   | wallpaper |   5895 |
+| 4575462  | hariks | numma    | uk      |  857457 | 658954   | wallpaper |   5895 |
+| 245445   | anil   | vij      | in      |  857457 | 658954   | wallpaper |   5895 |
+| 97987874 | yamini | one town | IN      | 1454589 | 245445   | mobile    | 454554 |
+| 658954   | suma   | hyd      | uk      | 1454589 | 245445   | mobile    | 454554 |
+| 4575462  | hariks | numma    | uk      | 1454589 | 245445   | mobile    | 454554 |
+| 245445   | anil   | vij      | in      | 1454589 | 245445   | mobile    | 454554 |
++----------+--------+----------+---------+---------+----------+-----------+--------+
+16 rows in set (0.00 sec)
+
+
+
+mysql> create database ig;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use ug;
+ERROR 1049 (42000): Unknown database 'ug'
+mysql> use ig;
+Database changed
+mysql> create table users(id  bigint not null auto_increment primary key,username varchar(20) unique,created_at datetime default now());
+Query OK, 0 rows affected (0.02 sec)
+ create table followers(follower bigint,followee bigint,created_at timestamp default now(), primary key(follower,followee),foreign key(follower) references users(id),foreign key (followee) references users(id));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into users (username) values('bhagi@bhjkf'),('sai@fghj'),('mastii@bhdr'),('kusu@bhar'),('@bhargavi'),('pandu@bh'),('kaveri@fg');
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++----+-------------+---------------------+
+| id | username    | created_at          |
++----+-------------+---------------------+
+|  1 | bhagi@bhjkf | 2023-03-03 12:20:12 |
+|  2 | sai@fghj    | 2023-03-03 12:20:12 |
+|  3 | mastii@bhdr | 2023-03-03 12:20:12 |
+|  4 | kusu@bhar   | 2023-03-03 12:20:12 |
+|  5 | @bhargavi   | 2023-03-03 12:20:12 |
+|  6 | pandu@bh    | 2023-03-03 12:20:12 |
+|  7 | kaveri@fg   | 2023-03-03 12:20:12 |
++----+-------------+---------------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into followers(follower,followee) values(1,2),(1,6),(2,7),(2,6
+),(4,6),(3,6),(4,7);
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> select u.id,u.username,f.followee  from users as u inner join followe
+rs as f on u.id=f.follower;
++----+-------------+----------+
+| id | username    | followee |
++----+-------------+----------+
+|  1 | bhagi@bhjkf |        2 |
+|  1 | bhagi@bhjkf |        6 |
+|  4 | kusu@bhar   |        6 |
+|  4 | kusu@bhar   |        7 |
+|  3 | mastii@bhdr |        6 |
+|  2 | sai@fghj    |        6 |
+|  2 | sai@fghj    |        7 |
++----+-------------+----------+
+7 rows in set (0.00 sec)
+
+mysql> select u.username,f.followee  from users as u inner join followers as f on u.id=f.follower;
++-------------+----------+
+| username    | followee |
++-------------+----------+
+| bhagi@bhjkf |        2 |
+| bhagi@bhjkf |        6 |
+| kusu@bhar   |        6 |
+| kusu@bhar   |        7 |
+| mastii@bhdr |        6 |
+| sai@fghj    |        6 |
+| sai@fghj    |        7 |
++-------------+----------+
+7 rows in set (0.00 sec)
+
+mysql> select u.username,count(f.followee) as followers from users as u inne
+r join followers as f on u.id=f.follower group by u.username;
++-------------+-----------+
+| username    | followers |
++-------------+-----------+
+| bhagi@bhjkf |         2 |
+| kusu@bhar   |         2 |
+| mastii@bhdr |         1 |
+| sai@fghj    |         2 |
++-------------+-----------+
+4 rows in set (0.04 sec)
+
+mysql> select u.username,count(f.follower) as followers from users as u inner join followers as f on u.id=f.followee group by u.username;
++-----------+-----------+
+| username  | followers |
++-----------+-----------+
+| kaveri@fg |         2 |
+| pandu@bh  |         4 |
+| sai@fghj  |         1 |
++-----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select u.id, u.username,f.followee as following from users as u inner
+ join followers as f on u.id=f.follower;
++----+-------------+-----------+
+| id | username    | following |
++----+-------------+-----------+
+|  1 | bhagi@bhjkf |         2 |
+|  1 | bhagi@bhjkf |         6 |
+|  4 | kusu@bhar   |         6 |
+|  4 | kusu@bhar   |         7 |
+|  3 | mastii@bhdr |         6 |
+|  2 | sai@fghj    |         6 |
+|  2 | sai@fghj    |         7 |
++----+-------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> select u.id, u.username,f.followee as following from users as u left join followers as f on u.id=f.follower;
++----+-------------+-----------+
+| id | username    | following |
++----+-------------+-----------+
+|  5 | @bhargavi   |      NULL |
+|  1 | bhagi@bhjkf |         2 |
+|  1 | bhagi@bhjkf |         6 |
+|  7 | kaveri@fg   |      NULL |
+|  4 | kusu@bhar   |         6 |
+|  4 | kusu@bhar   |         7 |
+|  3 | mastii@bhdr |         6 |
+|  6 | pandu@bh    |      NULL |
+|  2 | sai@fghj    |         6 |
+|  2 | sai@fghj    |         7 |
++----+-------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select u.id, u.username,f.followee as following from users as u left join followers as f on u.id=f.follower where f.followee is null;
++----+-----------+-----------+
+| id | username  | following |
++----+-----------+-----------+
+|  5 | @bhargavi |      NULL |
+|  7 | kaveri@fg |      NULL |
+|  6 | pandu@bh  |      NULL |
++----+-----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select  u.username  from users as u left join followers as f on u.id=f.follower where f.followee is null;
++-----------+
+| username  |
++-----------+
+| @bhargavi |
+| kaveri@fg |
+| pandu@bh  |
++-----------+
+3 rows in set (0.00 sec)
+
+mysql> select  u.username  from users as u right join followers as f on u.id=f.follower where f.followee is null;
+Empty set (0.00 sec)
+
+mysql> select  u.username  from users as u left join followers as f on u.id=
+f.followee ;
++-------------+
+| username    |
++-------------+
+| @bhargavi   |
+| bhagi@bhjkf |
+| kaveri@fg   |
+| kaveri@fg   |
+| kusu@bhar   |
+| mastii@bhdr |
+| pandu@bh    |
+| pandu@bh    |
+| pandu@bh    |
+| pandu@bh    |
+| sai@fghj    |
++-------------+
+11 rows in set (0.00 sec)
+
+mysql> select u.id, u.username  from users as u left join followers as f on u.id=f.followee ;
++----+-------------+
+| id | username    |
++----+-------------+
+|  5 | @bhargavi   |
+|  1 | bhagi@bhjkf |
+|  7 | kaveri@fg   |
+|  7 | kaveri@fg   |
+|  4 | kusu@bhar   |
+|  3 | mastii@bhdr |
+|  6 | pandu@bh    |
+|  6 | pandu@bh    |
+|  6 | pandu@bh    |
+|  6 | pandu@bh    |
+|  2 | sai@fghj    |
++----+-------------+
+11 rows in set (0.00 sec)
+
+mysql> select u.id, u.username,f.follower  from users as u left join followers as f on u.id=f.followee ;
++----+-------------+----------+
+| id | username    | follower |
++----+-------------+----------+
+|  5 | @bhargavi   |     NULL |
+|  1 | bhagi@bhjkf |     NULL |
+|  7 | kaveri@fg   |        2 |
+|  7 | kaveri@fg   |        4 |
+|  4 | kusu@bhar   |     NULL |
+|  3 | mastii@bhdr |     NULL |
+|  6 | pandu@bh    |        1 |
+|  6 | pandu@bh    |        2 |
+|  6 | pandu@bh    |        3 |
+|  6 | pandu@bh    |        4 |
+|  2 | sai@fghj    |        1 |
++----+-------------+----------+
+11 rows in set (0.00 sec)
+
+
+
+mysql> select f.follower,u.id,u.username from followers right join users  as u on f.follower=u.id;
+ERROR 1054 (42S22): Unknown column 'f.follower' in 'field list'
+mysql> select f.followee,u.id,u.username from followers as f  right join users  as u on f.follower=u.id;
++----------+----+-------------+
+| followee | id | username    |
++----------+----+-------------+
+|     NULL |  5 | @bhargavi   |
+|        2 |  1 | bhagi@bhjkf |
+|        6 |  1 | bhagi@bhjkf |
+|     NULL |  7 | kaveri@fg   |
+|        6 |  4 | kusu@bhar   |
+|        7 |  4 | kusu@bhar   |
+|        6 |  3 | mastii@bhdr |
+|     NULL |  6 | pandu@bh    |
+|        6 |  2 | sai@fghj    |
+|        7 |  2 | sai@fghj    |
++----------+----+-------------+
+10 rows in set (0.00 sec)
+
+                DAY-6/3
+
+
+INTERNET:it is a network of computer
+--------
+          clients-->server ---> request--> response
+
+protocol: set of rule that transmits from one  sys to another sys
+---------
+WEB FRAMEWORKS:
+--------------
+
+It is a set of tools or libraries that helps application writers to develop web applications,web resources,web apis   without bothering about protocols or any low level lang. 
+
+FLASK:  
+-------
+Flask is python's micro webframework which is  written  completely in python .It is invented by armin ronacher on 2010.core as simple (micro)
+Two components: 
+ -----------      
+ .werkzeug toolkit (wsgi protocol)
+ .jinja2 (template engine)  it  is a template to comminicate web server through wsgi to data sources to display dynamic web pages
+
+WSGI:  web server gateway interface
+      
+four types of converters:
+ ----------------------                
+             .int  (int:var)                        # var use in function also same to pass same var name
+             .string (string:var)
+             .float (float:var)    var=variable
+             .path-->path:path (we add route to another route)
+             . uuid --> uuid:var (universally unique idendifer)
+
+
+
+>mkdir firstproject
+pip install virtualenv
+>cd firstproject
+>.\bhagi\Scripts\activate
+pip install flask
+>deactivate
+C:\Users\chinni08\Desktop\firstproject>pip list
+C:\Users\chinni08\Desktop\firstproject>.\bhagi\Scripts\activate
+pip list
+python app.py
+ * Serving Flask app 'app'
+
+                   DAY-7/3
+FLASK:
+-------
+pip frezze > requirments.txt to save packages in file
+to frezze dependency of a project to use this cmd(to listout in requirments.txt file)
+Pip install -r requirments.txt (reinstall)
+URL_FOR :to bulid dynamic routes
+--------
+HTTP METHODS OR REQUEST:
+C:post
+R:get--->request from client-->200 (sucessful response)
+   ------>300(redirect response)
+    ------>400 (client errors responses)
+    -------> 500 (server  side error response)
+U:put
+D:delete
+
+                   DAY-8/3
+
+
+jinja2:  it is a website templete engine (to display html (or) templete use jinja2)  #it combines web templates along with data variables to generate  dynamic web pages
+-------
+SYNTAX:
+------
+expression or output the values to template--{{variables}}
+statements--{% if condition %} elements
+            {% elif condition %} elements
+            {% else %} elements
+            {% endif %}
+            {% for i in collect %}  {% endfor %}
+
+JINJA INHERITANCE:
+-----------------
+it allows us to bulid a  skeleton template from our site that has all   common functionalities and bulid the blocks that child template can overite
+defining block
+{% block block_name %}
+{% endblock %}
+
+Database changed
+mysql> select * from students;
++-----+---------------------+--------+---------+----------+
+| id  | name                | course | address | moblie   |
++-----+---------------------+--------+---------+----------+
+| 456 | chinni bhargava sai | b.sc   | vizag   | 98668923 |
++-----+---------------------+--------+---------+----------+
+1 row in set (0.01 sec)
+
+mysql> select * from students;
++-----+---------------------+--------+---------+----------+
+| id  | name                | course | address | moblie   |
++-----+---------------------+--------+---------+----------+
+| 456 | chinni bhargava sai | b.sc   | vizag   | 98668923 |
++-----+---------------------+--------+---------+----------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+                           DAY-24/3
+
+.project planning:
+.features identification
+.account login or singup
+.products catelog
+.cart system
+.payment gateway
+.orders invoice and info
+
+.FRONTED LOGIC
+.BACKEND LOGIC
+
+.student personal records manager
+.account singup and signin
+.notes creation ,update,view,delete,notesmail
+.files upload,view,download,update,delete
+
+
+https://tinyurl.com/spmpbsinternship
+
+spmpfs
+
+sk_test_51MvxBhSEctuyI3JccAtrhQRo5eNrEmRdroQ6aob5Iz6N6jopPcSS1YlHCBiHawgEtQudqYXGdYCBh2isoFHNGewR00C6WTKz6t
+
+
+
+https://github.com/EswarNandivada/SPM.git
+
+
+
+
+
+
